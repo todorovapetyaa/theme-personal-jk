@@ -1,0 +1,22 @@
+
+ <label for="nav-toggle" class="nav-toggle-label">Menu</label>
+    <nav class="site-nav loc-{{include.location}}">
+        <ul>
+            {% assign navigation = site.pages | sort:"order" %}
+            {% for current_page in navigation %}
+                {% if current_page.title %}
+                
+                <li class="{% if current_page.url == page.url %} current-page {% endif %}">
+                    <a href="{{site.baseurl}}{{current_page.url}}">{{current_page.title}}</a>
+                </li>
+                {% endif %}
+            {% endfor %}
+
+            {% if include.location == 'header' %} <!-- може да се вмъкне допълнително съдържание -->
+            <!-- <li class="icon-search"><a href="#" > </a></li> -->
+            {% endif %}
+        </ul>
+
+        
+        
+    </nav>

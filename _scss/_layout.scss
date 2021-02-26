@@ -1,0 +1,134 @@
+.site {
+    position: relative; 
+}
+
+.site-wrap {
+    max-width: 75rem;
+    margin: 0 auto;
+    
+}
+
+
+//HEADER
+
+.site-header {
+
+    .site-wrap {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5em 0;
+    }
+    
+    position: relative;
+    flex-direction: column;
+
+    .current-page a,
+    a:hover {
+    color: var(--main-color);
+    }
+}
+
+
+//ENTRY 
+
+.entry {
+    display: flex;
+    height: 30em;
+    background: #eee;
+    margin-bottom: 2em;
+    position: relative;
+    top: -3em;
+
+    &-media {
+        position: relative;
+        flex: 0 0 50%;
+        overflow: hidden;
+
+        &:before {
+            padding-top: 80%;
+            content: '';
+            display: block;
+        }
+
+        img {
+            display: block;
+            width: auto;
+            height: 100%;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 0.5s ease-in;
+            
+        }
+    }
+
+    &:hover img {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    &-content {
+        padding: 3em;
+        margin: 2em 0;
+        background: #fff;
+        box-shadow: 0 0 1.5em 0 rgba(50, 50, 50, 0.1);
+        position: relative;
+        right: 2em;
+        z-index: 3;
+    }
+
+    &:hover, &-title, &-subtitle {
+        color: #3498db;
+        cursor: pointer;
+    }
+
+    &-title {
+        padding-bottom: 0.3em;
+    }
+
+    &-subtitle{
+        font-weight: var(--font-bold);
+        margin-bottom: 1.5em;
+    }
+
+    &-content p {
+        color: #555;
+        font-size: 1.5em;
+    }
+
+}
+
+.entry:nth-child(even) {
+    & .entry-media { order: 2; }
+    
+    & .entry-content { right: -2em;}
+}
+
+
+//FOOTER
+
+.site-footer {
+    .site-wrap {
+    padding: 1.5em 0;
+    color: #ABB7B7;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: color .3s ease-in;
+
+        &:hover {
+            color: rgb(77, 77, 77);
+        }
+    }
+
+
+    .copyr > * {
+        margin-right: 1em;
+    }
+
+}
+
+.footer-text h4 {
+    font-weight: normal;
+}
