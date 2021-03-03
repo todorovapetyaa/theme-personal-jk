@@ -17,7 +17,7 @@ gulp.task("sass", function() {
 		// .pipe( csso() )
 		// .pipe( size() )
 		.pipe( gulp.dest( './docs/css/' ) )
-		.pipe( gulp.dest( './css/' ) )
+		// .pipe( gulp.dest( './css/' ) )
 		.pipe( browserSync.stream({ match: '**/*.css' }) )
 	;
 });

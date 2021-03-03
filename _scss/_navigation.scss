@@ -1,30 +1,31 @@
 .site-nav {
-    font-size: 1.2em;
-    position: relative;
-    
+    font-size: 1.2em;  
 
     ul {
-        display: flex;
-        align-items: center;
         margin-left: auto;
+   
 
         @include bp(mobile) {
             display: none;
             position: absolute;
             z-index: 20;
             right: 0;
-            top: 20px;
-            width: 10em;
+            top: 10%;
+            width: 20rem;
+            background: #fff;
+            padding: 2rem;
+
+            ul {
+                display: block;
+                position:static;
+                margin-left: 1em;
+                padding: 0;
+            }
     }
-        
-        ul {
-            display: none;
-            position: absolute;
-            z-index: 100;
-        }
-    }
+           
 
     li {
+        position: relative;
         display: block;
        
         a {
@@ -34,23 +35,42 @@
             transition: color 0.2s ease-in;
         }
 
-        &:hover ul {
+        &:hover > ul {
             display: block;
         }
 
     }
+    }
 
+    & > ul {
+        @include bp(desktop) {
+        display: flex;
+        align-items: center;
+
+            ul {
+                display: none;
+                position: absolute;
+                z-index: 100;
+                top: 100%;
+                left: 0;
+                width: 10em;
+                background: rgba(#fff, 0.8);
+
+            }
+        }
+    }
 }
 
 
-
+//NAV TOGGLE
 .nav-toggle {
     position: absolute;
     pointer-events: none;
+    display: none;
 
     
 
-    &:checked + .site .site-header .site-nav ul {
+    &:checked + .site .site-header .site-nav >ul {
         @include bp(mobile) {
             display: block;
         }
@@ -58,10 +78,7 @@
     }
 
     &-label {
-        background: rgba(130, 6, 161, 0.596);
-        display: block;
         padding: 0.5em 1em;
-        color:#fff;
         margin-left: auto;
 
         @include bp(desktop) {

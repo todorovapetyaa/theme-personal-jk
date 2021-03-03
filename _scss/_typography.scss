@@ -5,6 +5,16 @@ html {
     line-height: var(--line-height);
     font-family: var(--font-main), sans-serif;
     color: var(--text-color);
+
+    @include bp (mobile){
+        font-size: 14px;
+    }
+    @include bp (phone){
+        font-size: 12px;
+    }
+    @include bp (desktop){
+        font-size: 16px;
+    }
 }
 
 button, textarea,form, input, option, select,a {
@@ -14,6 +24,7 @@ button, textarea,form, input, option, select,a {
 h1, h2, h3, h4, h5, h6 {
     padding-bottom: 0.5em;
     line-height: 1.2em;
+    color: var(--dark-grey);
 }
 
 h1 { font-size: 2.4em; }
@@ -38,10 +49,21 @@ ul {
 
 .site-media {
     color:#fff;
+
+    h1, h2, h3, h4, h5, h6 {
+        color: inherit;
+    }
 }
 
 .site-title {
     padding: 0;
+}
+
+img,
+.entry .portrait {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 

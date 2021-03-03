@@ -3,7 +3,7 @@
 }
 
 .site-wrap {
-    max-width: 75rem;
+    max-width: 80%;
     margin: 0 auto;
     
 }
@@ -12,6 +12,7 @@
 //HEADER
 
 .site-header {
+    background: #fff;
 
     .site-wrap {
         display:flex;
@@ -23,42 +24,67 @@
     position: relative;
     flex-direction: column;
 
-    .current-page a,
+    .current-page > a,
+    a:focus,
     a:hover {
     color: var(--main-color);
     }
+}
+
+//SITE-CONTENT
+
+.site-content .site-wrap {
+    position: relative;
+    top: -3em;
+}
+
+.single-post {
+    padding: 4rem;
 }
 
 
 //ENTRY 
 
 .entry {
-    display: flex;
-    height: 30em;
-    background: #eee;
+    background: var(--light-grey);
     margin-bottom: 2em;
-    position: relative;
-    top: -3em;
+    
+    
+    @include bp (desktop) {
+        display: flex;
+        height: 30em;
+    }
 
     &-media {
         position: relative;
-        flex: 0 0 50%;
         overflow: hidden;
+        
+        @include bp(desktop) {
+            flex: 0 0 50%;
+
+        }
 
         &:before {
             padding-top: 80%;
             content: '';
             display: block;
+
+            @include bp (mobile){
+                padding-top: 60%;
+            }
         }
 
         img {
             display: block;
-            width: auto;
-            height: 100%;
             position: absolute;
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
             transition: transform 0.5s ease-in;
+
+            @include bp (desktop) {
+                width: auto;
+                height: 100%;
+            }
             
         }
     }
@@ -75,10 +101,16 @@
         position: relative;
         right: 2em;
         z-index: 3;
+
+        @include bp (mobile) {
+            margin: 0 2em;
+            right: 0;
+            bottom:2em;
+        }
     }
 
     &:hover, &-title, &-subtitle {
-        color: #3498db;
+        color: var(--main-color);
         cursor: pointer;
     }
 
@@ -91,18 +123,28 @@
         margin-bottom: 1.5em;
     }
 
-    &-content p {
-        color: #555;
+    &-content p, {
+        color: var(--grey);
         font-size: 1.5em;
     }
 
+
+    @include bp (mobile) {
+        flex-direction: column;
+    }
 }
 
-.entry:nth-child(even) {
-    & .entry-media { order: 2; }
-    
-    & .entry-content { right: -2em;}
+@include bp (desktop) {
+    .entry:nth-child(even) {
+        & .entry-media { order: 2; }
+        
+        & .entry-content { right: -2em;}
+    }
 }
+
+
+
+
 
 
 //FOOTER

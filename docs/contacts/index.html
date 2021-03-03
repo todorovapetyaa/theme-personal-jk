@@ -14,13 +14,13 @@
 </head>
 <body class="page-contacts">
   
-    <!-- <input type="checkbox" id="nav-toggle" class="nav-toggle"> -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <div class="site">
         <header class="site-header">
             <section class="site-wrap">
                 <h1 class="site-title"><a href="/">Personal</a></h1>
                 
- <label for="nav-toggle" class="nav-toggle-label">Menu</label>
+ <label for="nav-toggle" class="nav-toggle-label icon menu-bar"></label>
     <nav class="site-nav loc-header">
         <ul>
             
@@ -33,6 +33,14 @@
                 
                 <li class="">
                     <a href="/theme-personal-jk/">Projects</a>
+                
+                    
+                    <ul>
+                        <li><a href="">Branding</a></li>
+                        <li><a href="">Building a website</a></li>
+                        <li><a href="">Online store</a></li>
+                    </ul>
+                    
                 </li>
                 
             
@@ -40,6 +48,8 @@
                 
                 <li class="">
                     <a href="/theme-personal-jk/blog/">Blog</a>
+                
+                    
                 </li>
                 
             
@@ -47,6 +57,8 @@
                 
                 <li class="">
                     <a href="/theme-personal-jk/about/">About</a>
+                
+                    
                 </li>
                 
             
@@ -54,6 +66,8 @@
                 
                 <li class=" current-page ">
                     <a href="/theme-personal-jk/contacts/">Contacts</a>
+                
+                    
                 </li>
                 
             
@@ -69,35 +83,44 @@
 
              </section>
             
-            <section class="site-media">
+             
+            <section class="site-media" style="background-image: url(https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);">
                 <div class="overlay"></div>
                <div class="site-wrap">
-                    <h1>A sleek, modern Jekyll theme for personal websites</h1>
-                    <p>Personal is the perfect theme for developers, designers and other creatives.</p>
-                 
-                    <ul class="social loc-header">
-    <li><a href="#" class="facebook"></a></li>
-    <li><a href="#" class="twitter"></a></li>
-    <li><a href="#" class="instagram"></a></li>
-    <li><a href="#" class="github"></a></li>
-</ul>
-               </div>
-    
-               <!-- <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt=""> -->
+                   
+                    <h1>Contact</h1>
+                    
+                    <p>Personal comes with a built-in contact form that's free and easy to set up.</p>
+                    
+                </div>
+                
+                <!-- <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt=""> -->
             </section>
+            
         </header>
 
         <main class="site-content">
             <div class="site-wrap">
 
-                <ul>
-    <li>Tel:</li>
-    <li>e-mail:</li>
-    <li>Location: </li>
-    <div class="contacts-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.2490104522117!2d25.62477141511434!3d43.078259979145216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a92611c1980509%3A0xfd0a3e25697df355!2sIntercontact%20Translation!5e0!3m2!1sen!2sbg!4v1596808669804!5m2!1sen!2sbg" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    </div>
-</ul>
+                <article class="single-post">
+    <form action="get" id=contact-form>
+        <div class="contact_form_item">
+            <label for="email">Email Address *:</label>
+            <input type="email" id="email" name="email" placeholder="Your email address..." autocomplete>
+        </div>
+        <div class="contact_form_item">
+            <label for="name">Name *:</label>
+            <input type="text" id="name" name="name" placeholder="Your name...">
+        </div>
+        <div class="contact_form_item">
+            <label for="message">Message *:</label>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message...">
+
+            </textarea>
+        </div>
+       <input type="submit" value="Send Message" class="btn">
+    </form>
+</article>
             </div>
            
             
