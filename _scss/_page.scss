@@ -1,0 +1,26 @@
+.page-projects {
+    .site-media {
+        min-height: 85vh;
+    }
+}
+
+.page-about, 
+.page-contacts {
+    background: $light-grey;
+    
+    .site-content .site-wrap {
+        background: #fff;
+        font-size: 1.2em;
+    }
+}
+    
+.page-about{
+    .features {
+        list-style: disc inside;
+        padding-bottom: 2rem;
+        color:$grey;
+
+        li {margin-bottom: 0.4rem;}
+        
+    }
+}

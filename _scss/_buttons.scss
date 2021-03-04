@@ -1,0 +1,42 @@
+.btn,
+.btn-post {
+    color:#fff;
+}
+
+.btn {
+    background: $main-color;
+    padding: 1rem 1.5rem;
+    border: none;
+    
+}
+
+.btn-post {
+    display: flex;
+    font-size: 1.2rem;
+       
+    a {
+        flex: 0 0 50%;
+        padding: 2.5rem;
+        transition: background 0.1s ease-in;
+        
+
+        &.older {
+            justify-content: end;
+            background: #2A2F36;
+        }
+        &.newer {
+            justify-content: start;
+            visibility: hidden;
+            background: #6C7A89;
+        }
+
+        &:hover {
+            background: $main-color;
+            transition: background 0.1s ease-in;
+    
+        }
+
+    }
+    
+    
+}

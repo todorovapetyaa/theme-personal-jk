@@ -1,0 +1,36 @@
+.contact_form_item {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.2rem;
+
+    label {
+        color:$grey;
+        margin-bottom: 0.4rem;
+    }
+
+    textarea {
+        max-height: 200px;
+    }
+
+    input,
+    textarea {
+        display: block;
+        border-radius: 0.1rem;
+        border-style: solid;
+        border-color: $light-grey;
+        border-width: 2px;
+        padding: 1rem;
+        max-width: 100%;
+        min-width: 100%;
+
+        &:active,
+        &:focus {
+            border-color: $main-color;
+        }
+
+    }
+}
+
+::placeholder {
+    color: #ccc;
+}
