@@ -27,7 +27,7 @@
     .current-page > a,
     a:focus,
     a:hover {
-    color: var(--main-color);
+    color: $main-color;
     }
 }
 
@@ -46,7 +46,7 @@
 //ENTRY 
 
 .entry {
-    background: var(--light-grey);
+    background: $light-grey;
     margin-bottom: 2em;
     
     
@@ -89,8 +89,14 @@
         }
     }
 
-    &:hover img {
-        transform: translate(-50%, -50%) scale(1.2);
+    &:hover {
+        img {
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+        .entry-title {
+            color: $main-color;
+        }
+
     }
 
     &-content {
@@ -109,8 +115,8 @@
         }
     }
 
-    &:hover, &-title, &-subtitle {
-        color: var(--main-color);
+    &:hover, &-subtitle {
+        color: $main-color;
         cursor: pointer;
     }
 
@@ -119,12 +125,12 @@
     }
 
     &-subtitle{
-        font-weight: var(--font-bold);
+        font-weight: $font-bold;
         margin-bottom: 1.5em;
     }
 
-    &-content p, {
-        color: var(--grey);
+    &-content p {
+        color: $grey;
         font-size: 1.5em;
     }
 
@@ -152,7 +158,7 @@
 .site-footer {
     .site-wrap {
     padding: 1.5em 0;
-    color: #ABB7B7;
+    color: #aaa;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -160,7 +166,7 @@
     transition: color .3s ease-in;
 
         &:hover {
-            color: rgb(77, 77, 77);
+            color: $grey;
         }
     }
 

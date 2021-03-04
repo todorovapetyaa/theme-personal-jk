@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,500,600,700,800&display=swap');
 
 html {
-    font-size: var(--font-size);
-    line-height: var(--line-height);
-    font-family: var(--font-main), sans-serif;
-    color: var(--text-color);
+    font-size: $font-size;
+    line-height: $line-height;
+    font-family: $font-main, sans-serif;
+    color: $text-color;
 
     @include bp (mobile){
         font-size: 14px;
@@ -24,7 +24,7 @@ button, textarea,form, input, option, select,a {
 h1, h2, h3, h4, h5, h6 {
     padding-bottom: 0.5em;
     line-height: 1.2em;
-    color: var(--dark-grey);
+    color: $dark-grey;
 }
 
 h1 { font-size: 2.4em; }

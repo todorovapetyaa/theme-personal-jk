@@ -1,15 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,500,600,700,800&display=swap");
-:root {
-  --font-main: 'Muli';
-  --font-size: 14px;
-  --line-height: 1.5;
-  --font-bold: 600;
-  --main-color: #3498db;
-  --text-color: #111;
-  --light-grey:#eee;
-  --grey:#555;
-  --dark-grey:#2a2f36; }
-
 * {
   margin: 0;
   padding: 0; }
@@ -24,10 +13,10 @@ input, textarea, label {
   display: inline-block; }
 
 html {
-  font-size: var(--font-size);
-  line-height: var(--line-height);
-  font-family: var(--font-main), sans-serif;
-  color: var(--text-color); }
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: "Muli", sans-serif;
+  color: #111; }
   @media (max-width: 1024px) {
     html {
       font-size: 14px; } }
@@ -44,7 +33,7 @@ button, textarea, form, input, option, select, a {
 h1, h2, h3, h4, h5, h6 {
   padding-bottom: 0.5em;
   line-height: 1.2em;
-  color: var(--dark-grey); }
+  color: #2a2f36; }
 
 h1 {
   font-size: 2.4em; }
@@ -100,7 +89,7 @@ img,
     font-size: 1.8rem;
     transition: background-color 0.3s ease-in; }
     .social li:hover {
-      background: var(--main-color); }
+      background: #3498db; }
   @media (max-width: 1024px) {
     .social {
       padding-top: 1rem; } }
@@ -167,7 +156,7 @@ a.github:before {
   .site-header .current-page > a,
   .site-header a:focus,
   .site-header a:hover {
-    color: var(--main-color); }
+    color: #3498db; }
 
 .site-content .site-wrap {
   position: relative;
@@ -177,7 +166,7 @@ a.github:before {
   padding: 4rem; }
 
 .entry {
-  background: var(--light-grey);
+  background: #eee;
   margin-bottom: 2em; }
   @media (min-width: 1025px) {
     .entry {
@@ -209,6 +198,8 @@ a.github:before {
           height: 100%; } }
   .entry:hover img {
     transform: translate(-50%, -50%) scale(1.2); }
+  .entry:hover .entry-title {
+    color: #3498db; }
   .entry-content {
     padding: 3em;
     margin: 2em 0;
@@ -222,16 +213,16 @@ a.github:before {
         margin: 0 2em;
         right: 0;
         bottom: 2em; } }
-  .entry:hover, .entry-title, .entry-subtitle {
-    color: var(--main-color);
+  .entry:hover, .entry-subtitle {
+    color: #3498db;
     cursor: pointer; }
   .entry-title {
     padding-bottom: 0.3em; }
   .entry-subtitle {
-    font-weight: var(--font-bold);
+    font-weight: 600;
     margin-bottom: 1.5em; }
   .entry-content p {
-    color: var(--grey);
+    color: #555;
     font-size: 1.5em; }
   @media (max-width: 1024px) {
     .entry {
@@ -245,14 +236,14 @@ a.github:before {
 
 .site-footer .site-wrap {
   padding: 1.5em 0;
-  color: #ABB7B7;
+  color: #aaa;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   transition: color .3s ease-in; }
   .site-footer .site-wrap:hover {
-    color: #4d4d4d; }
+    color: #555; }
 
 .site-footer .copyr > * {
   margin-right: 1em; }
@@ -285,7 +276,7 @@ a.github:before {
       .site-nav ul li a {
         display: block;
         padding: 0.5em 1em;
-        font-weight: var(--font-bold);
+        font-weight: 600;
         transition: color 0.2s ease-in; }
       .site-nav ul li:hover > ul {
         display: block; }
@@ -353,23 +344,29 @@ a.github:before {
 .page-projects .site-media {
   min-height: 85vh; }
 
-.page-about, .page-contacts {
-  background: var(--light-grey); }
-  .page-about .site-content .site-wrap, .page-contacts .site-content .site-wrap {
+.page-about,
+.page-contacts {
+  background: #eee; }
+  .page-about .site-content .site-wrap,
+  .page-contacts .site-content .site-wrap {
     background: #fff;
     font-size: 1.2em; }
-  .page-about .feauters, .page-contacts .feauters {
-    list-style: disc inside;
-    padding-bottom: 2rem;
-    color: var(--grey); }
+
+.page-about .features {
+  list-style: disc inside;
+  padding-bottom: 2rem;
+  color: #555; }
+  .page-about .features li {
+    margin-bottom: 0.4rem; }
 
 .btn,
 .btn-post {
   color: #fff; }
 
 .btn {
-  background: var(--main-color);
-  padding: 1rem 1.5rem; }
+  background: #3498db;
+  padding: 1rem 1.5rem;
+  border: none; }
 
 .btn-post {
   display: flex;
@@ -386,7 +383,7 @@ a.github:before {
       visibility: hidden;
       background: #6C7A89; }
     .btn-post a:hover {
-      background: var(--main-color);
+      background: #3498db;
       transition: background 0.1s ease-in; }
 
 .contact_form_item {
@@ -394,7 +391,7 @@ a.github:before {
   flex-direction: column;
   padding-bottom: 1.2rem; }
   .contact_form_item label {
-    color: var(--grey);
+    color: #555;
     margin-bottom: 0.4rem; }
   .contact_form_item textarea {
     max-height: 200px; }
@@ -403,13 +400,15 @@ a.github:before {
     display: block;
     border-radius: 0.1rem;
     border-style: solid;
-    border-color: --light-grey;
+    border-color: #eee;
     border-width: 2px;
-    padding: 1rem; }
+    padding: 1rem;
+    max-width: 100%;
+    min-width: 100%; }
     .contact_form_item input:active, .contact_form_item input:focus,
     .contact_form_item textarea:active,
     .contact_form_item textarea:focus {
-      border-color: var(--main-color); }
+      border-color: #3498db; }
 
 ::-moz-placeholder {
   color: #ccc; }
